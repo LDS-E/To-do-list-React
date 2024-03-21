@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import TaskItem from './TaskItem';
 import EditTaskContainer from './EditTaskContainer';
 
-
 const MainSection = () => {
   const [tasks, setTasks] = useState(() => {
     const savedTasks = JSON.parse(localStorage.getItem('tasks'));
@@ -19,12 +18,10 @@ const MainSection = () => {
   }, [tasks]);
 
   const addTask = (taskName) => {
-    if (taskName.trim() === '') {
-      // Não adiciona tarefa em branco
-      return;
-    }
+    if (!taskName.trim()) return;
+    
     const newTask = { name: taskName, createdAt: Date.now(), completed: false };
-    setTasks([...tasks, newTask]);
+    setTasks(currentTasks => [...currentTasks, newTask]);
   };
 
   const deleteTask = (index) => {
@@ -37,6 +34,9 @@ const MainSection = () => {
     const updatedTasks = [...tasks];
     updatedTasks[index].completed = !updatedTasks[index].completed;
     setTasks(updatedTasks);
+
+    // With the .map() method
+    // setTasks(currTasks => currTasks.map(task => ({ ...task, completed: !task.completed})))
   };
 
   const startEditTask = (index) => {
@@ -44,11 +44,10 @@ const MainSection = () => {
   };
 
   const saveEditedTask = (index, newName) => {
-    if (newName.trim() === '') {
-      // Não salva tarefa em branco
-      cancelEditTask();
-      return;
-    }
+    if (!newName.trim() === '') {
+      
+      return cancelEditTask();
+
     const updatedTasks = [...tasks];
     updatedTasks[index].name = newName;
     setTasks(updatedTasks);
@@ -93,7 +92,7 @@ const MainSection = () => {
               <p id="date" className="bg-white px-8 py-4 font-extrabold rounded-3xl text-xl shadow">Loading date...</p>
             </div>
             <div id="week-days" className="flex justify-equal justify-center mb-3 w-full">
-              {/* Week days will be populated here by JavaScript */}
+              {}
             </div>
           </div>
           <div className="todo-list__container">

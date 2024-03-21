@@ -6,7 +6,7 @@ const TaskItem = ({ task, index, onToggleTaskCompletion, onStartEditTask, onDele
   };
 
   return (
-    <li key={index} className="todo-item">
+    <li key={index} className="flex justify-center todo-item">
       <button className="button-check" onClick={() => onToggleTaskCompletion(index)}>
         <i className={`fas fa-check ${task.completed ? "" : "displayNone"}`}></i>
       </button>
