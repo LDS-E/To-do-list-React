@@ -1,4 +1,5 @@
 
+
 const TaskItem = ({ task, index, onToggleTaskCompletion, onStartEditTask, onDeleteTask }) => {
   const handleDoubleClick = () => {
     onStartEditTask(index);

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import TaskItem from './TaskItem';
 import EditTaskContainer from './EditTaskContainer';
 
+
 const MainSection = () => {
   const [tasks, setTasks] = useState(() => {
     const savedTasks = JSON.parse(localStorage.getItem('tasks'));
