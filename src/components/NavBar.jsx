@@ -2,7 +2,7 @@ import React from 'react';
 
 const NavBar = () => {
     return (
-        <div className="bg-yellow-200 p-4 rounded-lg shadow-lg border border-yellow-300 mt-10" style={{ height: '30vh' }}>
+        <div className="w-1/5 px-4 py-10 rounded-lg shadow-lg border text-center border-neutral-700 bg-neutral-800">
             <p className="font-bold mb-4">My Tasks</p>
             <ul className="list-none">
                 <li className="mb-2"><a href="#today" className="text-blue-800 hover:text-blue-600">Today</a></li>

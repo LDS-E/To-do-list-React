@@ -1,16 +1,12 @@
-import MainSection from './components/MainSection';
-import React from "react";
-import NavBar from "./components/NavBar";
-import Header from "./components/header";
+
 import Footer from "./components/Footer";
+import MasterBlaster from './components/MasterBlaster';
 
 
 function App() {
   return (
-      <div className="flex p-4">
-      <NavBar />
-      <Header />
-      <MainSection />
+      <div className="flex-col h-screen justify-between  bg-neutral-900">
+      <MasterBlaster />
       <Footer />
     </div>
   );
