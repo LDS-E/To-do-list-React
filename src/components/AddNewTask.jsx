@@ -27,7 +27,7 @@ const AddNewTask = ({ setTasks }) => {
   return (
     <form onSubmit={addTask}>
       <input
-        className='inputItem'
+        className='inputItem rounded-lg bg-slate-300 p-2'
         name='taskName'
         type='text'
         placeholder='New Item'
@@ -35,7 +35,7 @@ const AddNewTask = ({ setTasks }) => {
         value={taskName}
         onChange={(e) => setTaskName(e.target.value)}
       />
-      <button type='submit'>Add</button>
+      <button className='px-4 py-2 mx-4 bg-amber-500 hover:bg-amber-600 rounded-lg  shadow-emerald-50 ' type='submit'>Add</button>
     </form>
   );
 };

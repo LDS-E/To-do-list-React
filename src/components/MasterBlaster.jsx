@@ -1,14 +1,12 @@
-import MainSection from './components/MainSection';
-import NavBar from "./components/NavBar";
-import Header from "./components/header";
+import NavBar from "./NavBar";
 
+import MainSection from "./MainSection";
 
 
 function MasterBlaster() {
   return (
       <div className="flex h-screen">
       <NavBar />
-      <Header />
       <MainSection />
     </div>
   );

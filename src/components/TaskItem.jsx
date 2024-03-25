@@ -66,19 +66,21 @@ const TaskItem = ({ task, setTasks }) => {
       onCancel={() => setIsEditing(false)}
     />
   ) : (
-    <li className='flex justify-center todo-item'>
+    <li className='grid grid-cols-[0.2fr,4fr,0.25fr,0.25fr] gap-x-2 p-1 hover:bg-neutral-700 rounded-lg'>
       <button
         className='button-check'
         onClick={() => toggleTaskCompletion(task.id)}
       >
+        <div className='w-6 h-6 bg-neutral-500  shadow-emerald-50 rounded-lg'>
         <img
           src={checkIcon}
           alt=''
-          className={`w-6 aspect-square ${task.completed && 'hidden'}`}
+          className={`px-0.5 aspect-square ${task.completed && 'hidden'}`}
         />
+        </div>
       </button>
       {/* The handler was a wrapper for the same functionality in the pen icon. I'd say its simple enough to have it inline */}
-      <p className='task-name' onDoubleClick={() => setIsEditing(true)}>
+      <p className='text-white' onDoubleClick={() => setIsEditing(true)}>
         {task.name}
       </p>
       {/* 

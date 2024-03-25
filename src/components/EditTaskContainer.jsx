@@ -16,10 +16,10 @@ const EditTaskContainer = ({ initialName, onSave, onCancel }) => {
   };
 
   return (
-    <div className="editContainer" style={{ display: "flex" }}>
-      <input type="text" className="editInput" value={newName} onChange={handleInputChange} />
-      <button className="editButton" onClick={handleSave}>Edit</button>
-      <button className="cancelButton" onClick={handleCancel}>Cancel</button>
+    <div className="flex m-auto p-2" >
+      <input type="text" className="editInput  bg-slate-300 p-2 inputItem rounded-lg" value={newName} onChange={handleInputChange} />
+      <button className="px-4 py-2 mx-4 bg-amber-500 hover:bg-amber-600 rounded-lg  shadow-emerald-50" onClick={handleSave}>Edit</button>
+      <button className="px-4 py-2 mx-4 bg-amber-500 hover:bg-amber-600 rounded-lg  shadow-emerald-50" onClick={handleCancel}>Cancel</button>
     </div>
   );
 };

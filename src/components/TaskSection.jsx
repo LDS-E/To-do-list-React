@@ -5,7 +5,7 @@ const TaskSection = ({ tasks, setTasks }) => {
   return (
     <>
       {/* Instead of having an additional state and render one component or another, we take a different approach. TaskItem will render in one of 2 ways, depending on whether that task item is being edited or not */}
-      <ul>
+      <ul className='p-2'>
         {tasks.map((task) => (
           <TaskItem key={task.id} task={task} setTasks={setTasks} />
         ))}
